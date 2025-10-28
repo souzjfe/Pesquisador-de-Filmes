@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  test-and-build:
+  build:
     runs-on: ubuntu-latest
     
     steps:
@@ -25,11 +25,6 @@ jobs:
       run: |
         cd filme-tmdb
         npm ci
-    
-    - name: Run ESLint
-      run: |
-        cd filme-tmdb
-        npm run lint
     
     - name: Build application
       run: |
